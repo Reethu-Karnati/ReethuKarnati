@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Equipment Showcase</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .header {
+            background-color: #f8f9fa;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .search-bar {
+            width: 300px;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            margin-right: 20px;
+        }
+
+        .filters {
+            display: flex;
+            gap: 10px;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            background-color: #f0f0f0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover,
+        .filter-btn:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .equipment-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .equipment-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .price {
+            color: #e74c3c;
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        .description {
+            margin-top: 15px;
+            color: #666;
+        }
+
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .contact-info {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        .contact-info li {
+            margin-bottom: 5px;
+        }
+
+        .contact-info a {
+            color: #333;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">Fitness Equipment Showcase</div>
+            <form class="search-bar">
+                <input type="text" placeholder="Search for equipment...">
+            </form>
+            <div class="filters">
+                <button class="filter-btn">All Equipment</button>
+                <button class="filter-btn">Muscle Machines</button>
+                <button class="filter-btn">Exercise Bikes</button>
+                <button class="filter-btn">Weight Lifting</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <h1>Popular Fitness Equipment</h1>
+        <div class="equipment-grid">
+            <article class="equipment-card">
+                <img src="https://via.placeholder.com/300x200" alt="Weight Machine" class="equipment-image">
+                <h2>Weight Lifting Machine</h2>
+                <p class="price">$1,500.00</p>
+                <p class="description">Perfect for beginners and advanced lifters.</p>
+            </article>
+
+            <article class="equipment-card">
+                <img src="https://via.placeholder.com/300x200" alt="Cross Trainer" class="equipment-image">
+                <h2>CrossFit Trainer</h2>
+                <p class="price">$2,000.00</p>
+                <p class="description">Perfect for all fitness levels.</p>
+            </article>
+
+            <article class="equipment-card">
+                <img src="https://via.placeholder.com/300x200" alt="Exercise Bike" class="equipment-image">
+                <h2>Exercise Bike</h2>
+                <p class="price">$1,200.00</p>
+                <p class="description">Advanced training with stability and efficiency.</p>
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <h2>Contact Us</h2>
+        <ul class="contact-info">
+            <li><a href="#">Email: info@fitnessshowcase.com</a></li>
+            <li><a href="#">Phone: (555) 123-4567</a></li>
+            <li><a href="#">Address: 123 Fitness Street, New York, NY</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        // Add any necessary JavaScript functionality here
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                this.classList.add('active');
+                this.nextElementSibling.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
